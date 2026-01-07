@@ -1,0 +1,130 @@
+2026-01-06 22:04:48 - diabetes_predictor - WARNING - Failed to load settings for logging: 'Settings' object has no attribute 'log_level'
+2026-01-06 22:04:48 - diabetes_predictor - INFO - Test message
+2026-01-06 22:06:42 - diabetes_predictor - INFO - Test message
+2026-01-06 22:41:59 - diabetes_predictor - INFO - Test log message
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Configuration:
+2026-01-06 22:42:24 - diabetes_predictor - INFO - ================================================================================
+2026-01-06 22:42:24 - diabetes_predictor - INFO - DIABETES RISK PREDICTION MODEL - TRAINING PIPELINE
+2026-01-06 22:42:24 - diabetes_predictor - INFO - ================================================================================
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Model version: 1.0.0
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Environment: development
+2026-01-06 22:42:24 - diabetes_predictor - INFO - ================================================================================
+
+2026-01-06 22:42:24 - diabetes_predictor - INFO - 
+================================================================================
+2026-01-06 22:42:24 - diabetes_predictor - INFO - STEP 1: DATA PREPROCESSING
+2026-01-06 22:42:24 - diabetes_predictor - INFO - ================================================================================
+2026-01-06 22:42:24 - diabetes_predictor - INFO - ============================================================
+2026-01-06 22:42:24 - diabetes_predictor - INFO - STARTING DATA PREPROCESSING PIPELINE
+2026-01-06 22:42:24 - diabetes_predictor - INFO - ============================================================
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Loading data from /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/data/diabetes.csv
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Loaded 768 records with 9 columns
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Validating dataset
+2026-01-06 22:42:24 - diabetes_predictor - INFO - ✓ Data validation passed
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Handling missing values
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Found 5 zeros in Glucose, replacing with median
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Found 35 zeros in BloodPressure, replacing with median
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Found 227 zeros in SkinThickness, replacing with median
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Found 374 zeros in Insulin, replacing with median
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Found 11 zeros in BMI, replacing with median
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Detecting outliers
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Found 4 outliers in Pregnancies
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Found 14 outliers in BloodPressure
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Found 87 outliers in SkinThickness
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Found 346 outliers in Insulin
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Found 8 outliers in BMI
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Found 29 outliers in DiabetesPedigreeFunction
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Found 9 outliers in Age
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Splitting data: 80% train, 20% test
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Training set: 614 samples
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Test set: 154 samples
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Class distribution in training: {0: 400, 1: 214}
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Scaling features
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Scaler fitted - mean: [  3.81921824 121.67100977  72.14006515]...
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Scaler fitted - std: [ 3.31144822 29.97935076 12.26511926]...
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Saving scaler to /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/scalers/scaler_v1.0.0.pkl
+2026-01-06 22:42:24 - diabetes_predictor - INFO - ✓ Scaler saved successfully
+2026-01-06 22:42:24 - diabetes_predictor - INFO - ============================================================
+2026-01-06 22:42:24 - diabetes_predictor - INFO - ✓ PREPROCESSING COMPLETE
+2026-01-06 22:42:24 - diabetes_predictor - INFO - ============================================================
+2026-01-06 22:42:24 - diabetes_predictor - INFO - 
+✓ Data preprocessing complete
+2026-01-06 22:42:24 - diabetes_predictor - INFO -   Training samples: 614
+2026-01-06 22:42:24 - diabetes_predictor - INFO -   Test samples: 154
+2026-01-06 22:42:24 - diabetes_predictor - INFO -   Features: 8
+2026-01-06 22:42:24 - diabetes_predictor - INFO -   Class distribution (train): No diabetes: 400 (65.1%), Diabetes: 214 (34.9%)
+2026-01-06 22:42:24 - diabetes_predictor - INFO - 
+================================================================================
+2026-01-06 22:42:24 - diabetes_predictor - INFO - STEP 2: MODEL ARCHITECTURE
+2026-01-06 22:42:24 - diabetes_predictor - INFO - ================================================================================
+2026-01-06 22:42:24 - diabetes_predictor - INFO - ============================================================
+2026-01-06 22:42:24 - diabetes_predictor - INFO - BUILDING NEURAL NETWORK
+2026-01-06 22:42:24 - diabetes_predictor - INFO - ============================================================
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Input dimension: 8
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Hidden layers: [64, 32, 16]
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Dropout rate: 0.3
+2026-01-06 22:42:24 - diabetes_predictor - INFO - Learning rate: 0.001
+2026-01-06 22:42:24 - diabetes_predictor - ERROR - 
+✗ Training pipeline failed: All layers added to a Sequential model should have unique names. Name 'input_layer' is already the name of a layer in this model. Update the `name` argument to pass a unique name.
+Traceback (most recent call last):
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/scripts/train_model.py", line 235, in run_training_pipeline
+    self.model.build_model(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        input_dim=X_train.shape[1],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        learning_rate=self.config.get('learning_rate', settings.model.learning_rate)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/models/neural_network.py", line 71, in build_model
+    model = keras.Sequential([
+        # Input layer
+    ...<25 lines>...
+        layers.Dense(1, activation='sigmoid', name='output_layer')
+    ])
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/tf_env/lib/python3.13/site-packages/keras/src/models/sequential.py", line 75, in __init__
+    self.add(layer, rebuild=False)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/tf_env/lib/python3.13/site-packages/keras/src/models/sequential.py", line 103, in add
+    raise ValueError(
+    ...<4 lines>...
+    )
+ValueError: All layers added to a Sequential model should have unique names. Name 'input_layer' is already the name of a layer in this model. Update the `name` argument to pass a unique name.
+2026-01-06 22:42:24 - diabetes_predictor - ERROR - 
+
+Training failed: Training pipeline failed: All layers added to a Sequential model should have unique names. Name 'input_layer' is already the name of a layer in this model. Update the `name` argument to pass a unique name.
+Traceback (most recent call last):
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/scripts/train_model.py", line 235, in run_training_pipeline
+    self.model.build_model(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        input_dim=X_train.shape[1],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        learning_rate=self.config.get('learning_rate', settings.model.learning_rate)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/models/neural_network.py", line 71, in build_model
+    model = keras.Sequential([
+        # Input layer
+    ...<25 lines>...
+        layers.Dense(1, activation='sigmoid', name='output_layer')
+    ])
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/tf_env/lib/python3.13/site-packages/keras/src/models/sequential.py", line 75, in __init__
+    self.add(layer, rebuild=False)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/tf_env/lib/python3.13/site-packages/keras/src/models/sequential.py", line 103, in add
+    raise ValueError(
+    ...<4 lines>...
+    )
+ValueError: All layers added to a Sequential model should have unique names. Name 'input_layer' is already the name of a layer in this model. Update the `name` argument to pass a unique name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/scripts/train_model.py", line 558, in main
+    results = trainer.run_training_pipeline()
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/scripts/train_model.py", line 317, in run_training_pipeline
+    raise TrainingError(f"Training pipeline failed: {e}")
+utils.exceptions.TrainingError: Training pipeline failed: All layers added to a Sequential model should have unique names. Name 'input_layer' is already the name of a layer in this model. Update the `name` argument to pass a unique name.
