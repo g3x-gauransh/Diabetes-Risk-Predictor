@@ -128,3 +128,440 @@ Traceback (most recent call last):
   File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/scripts/train_model.py", line 317, in run_training_pipeline
     raise TrainingError(f"Training pipeline failed: {e}")
 utils.exceptions.TrainingError: Training pipeline failed: All layers added to a Sequential model should have unique names. Name 'input_layer' is already the name of a layer in this model. Update the `name` argument to pass a unique name.
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Configuration:
+2026-01-07 23:05:40 - diabetes_predictor - INFO - ================================================================================
+2026-01-07 23:05:40 - diabetes_predictor - INFO - DIABETES RISK PREDICTION MODEL - TRAINING PIPELINE
+2026-01-07 23:05:40 - diabetes_predictor - INFO - ================================================================================
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Model version: 1.0.0
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Environment: development
+2026-01-07 23:05:40 - diabetes_predictor - INFO - ================================================================================
+
+2026-01-07 23:05:40 - diabetes_predictor - INFO - 
+================================================================================
+2026-01-07 23:05:40 - diabetes_predictor - INFO - STEP 1: DATA PREPROCESSING
+2026-01-07 23:05:40 - diabetes_predictor - INFO - ================================================================================
+2026-01-07 23:05:40 - diabetes_predictor - INFO - ============================================================
+2026-01-07 23:05:40 - diabetes_predictor - INFO - STARTING DATA PREPROCESSING PIPELINE
+2026-01-07 23:05:40 - diabetes_predictor - INFO - ============================================================
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Loading data from /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/data/diabetes.csv
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Loaded 768 records with 9 columns
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Validating dataset
+2026-01-07 23:05:40 - diabetes_predictor - INFO - ✓ Data validation passed
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Handling missing values
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Found 5 zeros in Glucose, replacing with median
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Found 35 zeros in BloodPressure, replacing with median
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Found 227 zeros in SkinThickness, replacing with median
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Found 374 zeros in Insulin, replacing with median
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Found 11 zeros in BMI, replacing with median
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Detecting outliers
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Found 4 outliers in Pregnancies
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Found 14 outliers in BloodPressure
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Found 87 outliers in SkinThickness
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Found 346 outliers in Insulin
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Found 8 outliers in BMI
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Found 29 outliers in DiabetesPedigreeFunction
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Found 9 outliers in Age
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Splitting data: 80% train, 20% test
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Training set: 614 samples
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Test set: 154 samples
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Class distribution in training: {0: 400, 1: 214}
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Scaling features
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Scaler fitted - mean: [  3.81921824 121.67100977  72.14006515]...
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Scaler fitted - std: [ 3.31144822 29.97935076 12.26511926]...
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Saving scaler to /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/scalers/scaler_v1.0.0.pkl
+2026-01-07 23:05:40 - diabetes_predictor - INFO - ✓ Scaler saved successfully
+2026-01-07 23:05:40 - diabetes_predictor - INFO - ============================================================
+2026-01-07 23:05:40 - diabetes_predictor - INFO - ✓ PREPROCESSING COMPLETE
+2026-01-07 23:05:40 - diabetes_predictor - INFO - ============================================================
+2026-01-07 23:05:40 - diabetes_predictor - INFO - 
+✓ Data preprocessing complete
+2026-01-07 23:05:40 - diabetes_predictor - INFO -   Training samples: 614
+2026-01-07 23:05:40 - diabetes_predictor - INFO -   Test samples: 154
+2026-01-07 23:05:40 - diabetes_predictor - INFO -   Features: 8
+2026-01-07 23:05:40 - diabetes_predictor - INFO -   Class distribution (train): No diabetes: 400 (65.1%), Diabetes: 214 (34.9%)
+2026-01-07 23:05:40 - diabetes_predictor - INFO - 
+================================================================================
+2026-01-07 23:05:40 - diabetes_predictor - INFO - STEP 2: MODEL ARCHITECTURE
+2026-01-07 23:05:40 - diabetes_predictor - INFO - ================================================================================
+2026-01-07 23:05:40 - diabetes_predictor - INFO - ============================================================
+2026-01-07 23:05:40 - diabetes_predictor - INFO - BUILDING NEURAL NETWORK
+2026-01-07 23:05:40 - diabetes_predictor - INFO - ============================================================
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Input dimension: 8
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Hidden layers: [64, 32, 16]
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Dropout rate: 0.3
+2026-01-07 23:05:40 - diabetes_predictor - INFO - Learning rate: 0.001
+2026-01-07 23:05:40 - diabetes_predictor - ERROR - 
+✗ Training pipeline failed: All layers added to a Sequential model should have unique names. Name 'input_layer' is already the name of a layer in this model. Update the `name` argument to pass a unique name.
+Traceback (most recent call last):
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/scripts/train_model.py", line 235, in run_training_pipeline
+    self.model.build_model(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        input_dim=X_train.shape[1],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        learning_rate=self.config.get('learning_rate', settings.model.learning_rate)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/models/neural_network.py", line 71, in build_model
+    model = keras.Sequential([
+        # Input layer
+    ...<25 lines>...
+        layers.Dense(1, activation='sigmoid', name='output_layer')
+    ])
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/tf_env/lib/python3.13/site-packages/keras/src/models/sequential.py", line 75, in __init__
+    self.add(layer, rebuild=False)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/tf_env/lib/python3.13/site-packages/keras/src/models/sequential.py", line 103, in add
+    raise ValueError(
+    ...<4 lines>...
+    )
+ValueError: All layers added to a Sequential model should have unique names. Name 'input_layer' is already the name of a layer in this model. Update the `name` argument to pass a unique name.
+2026-01-07 23:05:40 - diabetes_predictor - ERROR - 
+
+Training failed: Training pipeline failed: All layers added to a Sequential model should have unique names. Name 'input_layer' is already the name of a layer in this model. Update the `name` argument to pass a unique name.
+Traceback (most recent call last):
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/scripts/train_model.py", line 235, in run_training_pipeline
+    self.model.build_model(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        input_dim=X_train.shape[1],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        learning_rate=self.config.get('learning_rate', settings.model.learning_rate)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/models/neural_network.py", line 71, in build_model
+    model = keras.Sequential([
+        # Input layer
+    ...<25 lines>...
+        layers.Dense(1, activation='sigmoid', name='output_layer')
+    ])
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/tf_env/lib/python3.13/site-packages/keras/src/models/sequential.py", line 75, in __init__
+    self.add(layer, rebuild=False)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/tf_env/lib/python3.13/site-packages/keras/src/models/sequential.py", line 103, in add
+    raise ValueError(
+    ...<4 lines>...
+    )
+ValueError: All layers added to a Sequential model should have unique names. Name 'input_layer' is already the name of a layer in this model. Update the `name` argument to pass a unique name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/scripts/train_model.py", line 558, in main
+    results = trainer.run_training_pipeline()
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/scripts/train_model.py", line 317, in run_training_pipeline
+    raise TrainingError(f"Training pipeline failed: {e}")
+utils.exceptions.TrainingError: Training pipeline failed: All layers added to a Sequential model should have unique names. Name 'input_layer' is already the name of a layer in this model. Update the `name` argument to pass a unique name.
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Configuration:
+2026-01-07 23:14:40 - diabetes_predictor - INFO - ================================================================================
+2026-01-07 23:14:40 - diabetes_predictor - INFO - DIABETES RISK PREDICTION MODEL - TRAINING PIPELINE
+2026-01-07 23:14:40 - diabetes_predictor - INFO - ================================================================================
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Model version: 1.0.0
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Environment: development
+2026-01-07 23:14:40 - diabetes_predictor - INFO - ================================================================================
+
+2026-01-07 23:14:40 - diabetes_predictor - INFO - 
+================================================================================
+2026-01-07 23:14:40 - diabetes_predictor - INFO - STEP 1: DATA PREPROCESSING
+2026-01-07 23:14:40 - diabetes_predictor - INFO - ================================================================================
+2026-01-07 23:14:40 - diabetes_predictor - INFO - ============================================================
+2026-01-07 23:14:40 - diabetes_predictor - INFO - STARTING DATA PREPROCESSING PIPELINE
+2026-01-07 23:14:40 - diabetes_predictor - INFO - ============================================================
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Loading data from /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/data/diabetes.csv
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Loaded 768 records with 9 columns
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Validating dataset
+2026-01-07 23:14:40 - diabetes_predictor - INFO - ✓ Data validation passed
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Handling missing values
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Found 5 zeros in Glucose, replacing with median
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Found 35 zeros in BloodPressure, replacing with median
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Found 227 zeros in SkinThickness, replacing with median
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Found 374 zeros in Insulin, replacing with median
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Found 11 zeros in BMI, replacing with median
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Detecting outliers
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Found 4 outliers in Pregnancies
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Found 14 outliers in BloodPressure
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Found 87 outliers in SkinThickness
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Found 346 outliers in Insulin
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Found 8 outliers in BMI
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Found 29 outliers in DiabetesPedigreeFunction
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Found 9 outliers in Age
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Splitting data: 80% train, 20% test
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Training set: 614 samples
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Test set: 154 samples
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Class distribution in training: {0: 400, 1: 214}
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Scaling features
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Scaler fitted - mean: [  3.81921824 121.67100977  72.14006515]...
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Scaler fitted - std: [ 3.31144822 29.97935076 12.26511926]...
+2026-01-07 23:14:40 - diabetes_predictor - INFO - Saving scaler to /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/scalers/scaler_v1.0.0.pkl
+2026-01-07 23:14:40 - diabetes_predictor - INFO - ✓ Scaler saved successfully
+2026-01-07 23:14:40 - diabetes_predictor - INFO - ============================================================
+2026-01-07 23:14:40 - diabetes_predictor - INFO - ✓ PREPROCESSING COMPLETE
+2026-01-07 23:14:40 - diabetes_predictor - INFO - ============================================================
+2026-01-07 23:14:40 - diabetes_predictor - INFO - 
+✓ Data preprocessing complete
+2026-01-07 23:14:40 - diabetes_predictor - INFO -   Training samples: 614
+2026-01-07 23:14:40 - diabetes_predictor - INFO -   Test samples: 154
+2026-01-07 23:14:40 - diabetes_predictor - INFO -   Features: 8
+2026-01-07 23:14:40 - diabetes_predictor - INFO -   Class distribution (train): No diabetes: 400 (65.1%), Diabetes: 214 (34.9%)
+2026-01-07 23:14:40 - diabetes_predictor - INFO - 
+================================================================================
+2026-01-07 23:14:40 - diabetes_predictor - INFO - STEP 2: MODEL ARCHITECTURE
+2026-01-07 23:14:40 - diabetes_predictor - INFO - ================================================================================
+2026-01-07 23:14:40 - diabetes_predictor - ERROR - 
+✗ Training pipeline failed: 'DiabetesNeuralNetwork' object has no attribute 'build_model'
+Traceback (most recent call last):
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/scripts/train_model.py", line 235, in run_training_pipeline
+    self.model.build_model(
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DiabetesNeuralNetwork' object has no attribute 'build_model'
+2026-01-07 23:14:40 - diabetes_predictor - ERROR - 
+
+Training failed: Training pipeline failed: 'DiabetesNeuralNetwork' object has no attribute 'build_model'
+Traceback (most recent call last):
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/scripts/train_model.py", line 235, in run_training_pipeline
+    self.model.build_model(
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DiabetesNeuralNetwork' object has no attribute 'build_model'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/scripts/train_model.py", line 558, in main
+    results = trainer.run_training_pipeline()
+  File "/Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/scripts/train_model.py", line 317, in run_training_pipeline
+    raise TrainingError(f"Training pipeline failed: {e}")
+utils.exceptions.TrainingError: Training pipeline failed: 'DiabetesNeuralNetwork' object has no attribute 'build_model'
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Configuration:
+2026-01-08 20:12:20 - diabetes_predictor - INFO - ================================================================================
+2026-01-08 20:12:20 - diabetes_predictor - INFO - DIABETES RISK PREDICTION MODEL - TRAINING PIPELINE
+2026-01-08 20:12:20 - diabetes_predictor - INFO - ================================================================================
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Model version: 1.0.0
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Environment: development
+2026-01-08 20:12:20 - diabetes_predictor - INFO - ================================================================================
+
+2026-01-08 20:12:20 - diabetes_predictor - INFO - 
+================================================================================
+2026-01-08 20:12:20 - diabetes_predictor - INFO - STEP 1: DATA PREPROCESSING
+2026-01-08 20:12:20 - diabetes_predictor - INFO - ================================================================================
+2026-01-08 20:12:20 - diabetes_predictor - INFO - ============================================================
+2026-01-08 20:12:20 - diabetes_predictor - INFO - STARTING DATA PREPROCESSING PIPELINE
+2026-01-08 20:12:20 - diabetes_predictor - INFO - ============================================================
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Loading data from /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/data/diabetes.csv
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Loaded 768 records with 9 columns
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Validating dataset
+2026-01-08 20:12:20 - diabetes_predictor - INFO - ✓ Data validation passed
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Handling missing values
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Found 5 zeros in Glucose, replacing with median
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Found 35 zeros in BloodPressure, replacing with median
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Found 227 zeros in SkinThickness, replacing with median
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Found 374 zeros in Insulin, replacing with median
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Found 11 zeros in BMI, replacing with median
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Detecting outliers
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Found 4 outliers in Pregnancies
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Found 14 outliers in BloodPressure
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Found 87 outliers in SkinThickness
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Found 346 outliers in Insulin
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Found 8 outliers in BMI
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Found 29 outliers in DiabetesPedigreeFunction
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Found 9 outliers in Age
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Splitting data: 80% train, 20% test
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Training set: 614 samples
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Test set: 154 samples
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Class distribution in training: {0: 400, 1: 214}
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Scaling features
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Scaler fitted - mean: [  3.81921824 121.67100977  72.14006515]...
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Scaler fitted - std: [ 3.31144822 29.97935076 12.26511926]...
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Saving scaler to /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/scalers/scaler_v1.0.0.pkl
+2026-01-08 20:12:20 - diabetes_predictor - INFO - ✓ Scaler saved successfully
+2026-01-08 20:12:20 - diabetes_predictor - INFO - ============================================================
+2026-01-08 20:12:20 - diabetes_predictor - INFO - ✓ PREPROCESSING COMPLETE
+2026-01-08 20:12:20 - diabetes_predictor - INFO - ============================================================
+2026-01-08 20:12:20 - diabetes_predictor - INFO - 
+✓ Data preprocessing complete
+2026-01-08 20:12:20 - diabetes_predictor - INFO -   Training samples: 614
+2026-01-08 20:12:20 - diabetes_predictor - INFO -   Test samples: 154
+2026-01-08 20:12:20 - diabetes_predictor - INFO -   Features: 8
+2026-01-08 20:12:20 - diabetes_predictor - INFO -   Class distribution (train): No diabetes: 400 (65.1%), Diabetes: 214 (34.9%)
+2026-01-08 20:12:20 - diabetes_predictor - INFO - 
+================================================================================
+2026-01-08 20:12:20 - diabetes_predictor - INFO - STEP 2: MODEL ARCHITECTURE
+2026-01-08 20:12:20 - diabetes_predictor - INFO - ================================================================================
+2026-01-08 20:12:20 - diabetes_predictor - INFO - ============================================================
+2026-01-08 20:12:20 - diabetes_predictor - INFO - BUILDING NEURAL NETWORK
+2026-01-08 20:12:20 - diabetes_predictor - INFO - ============================================================
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Input dimension: 8
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Hidden layers: [64, 32, 16]
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Dropout rate: 0.3
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Learning rate: 0.001
+2026-01-08 20:12:20 - diabetes_predictor - INFO - 
+Model Architecture:
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ dense (Dense)                        │ (None, 64)                  │             576 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout (Dropout)                    │ (None, 64)                  │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 32)                  │           2,080 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout_1 (Dropout)                  │ (None, 32)                  │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_2 (Dense)                      │ (None, 16)                  │             528 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout_2 (Dropout)                  │ (None, 16)                  │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_3 (Dense)                      │ (None, 1)                   │              17 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 3,201 (12.50 KB)
+ Trainable params: 3,201 (12.50 KB)
+ Non-trainable params: 0 (0.00 B)
+
+2026-01-08 20:12:20 - diabetes_predictor - INFO - 
+✓ Model built with 3,201 trainable parameters
+2026-01-08 20:12:20 - diabetes_predictor - INFO - 
+================================================================================
+2026-01-08 20:12:20 - diabetes_predictor - INFO - STEP 3: MODEL TRAINING
+2026-01-08 20:12:20 - diabetes_predictor - INFO - ================================================================================
+2026-01-08 20:12:20 - diabetes_predictor - INFO - ============================================================
+2026-01-08 20:12:20 - diabetes_predictor - INFO - TRAINING NEURAL NETWORK
+2026-01-08 20:12:20 - diabetes_predictor - INFO - ============================================================
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Training samples: 614
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Epochs: 200
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Batch size: 32
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Validation samples: 154
+2026-01-08 20:12:20 - diabetes_predictor - INFO - Configured 3 training callbacks
+2026-01-08 20:12:23 - diabetes_predictor - INFO - 
+✓ Training completed successfully
+2026-01-08 20:12:23 - diabetes_predictor - INFO - 
+Final Training Metrics:
+2026-01-08 20:12:23 - diabetes_predictor - INFO -   final_loss: 0.4051
+2026-01-08 20:12:23 - diabetes_predictor - INFO -   final_accuracy: 0.7899
+2026-01-08 20:12:23 - diabetes_predictor - INFO -   final_auc: 0.8798
+2026-01-08 20:12:23 - diabetes_predictor - INFO -   final_val_loss: 0.5010
+2026-01-08 20:12:23 - diabetes_predictor - INFO -   final_val_accuracy: 0.7403
+2026-01-08 20:12:23 - diabetes_predictor - INFO -   final_val_auc: 0.8200
+2026-01-08 20:12:23 - diabetes_predictor - INFO - 
+================================================================================
+2026-01-08 20:12:23 - diabetes_predictor - INFO - STEP 4: MODEL EVALUATION
+2026-01-08 20:12:23 - diabetes_predictor - INFO - ================================================================================
+2026-01-08 20:12:23 - diabetes_predictor - INFO - ============================================================
+2026-01-08 20:12:23 - diabetes_predictor - INFO - EVALUATING MODEL
+2026-01-08 20:12:23 - diabetes_predictor - INFO - ============================================================
+2026-01-08 20:12:23 - diabetes_predictor - INFO - 
+Test Set Performance:
+2026-01-08 20:12:23 - diabetes_predictor - INFO -   Accuracy:  0.7403
+2026-01-08 20:12:23 - diabetes_predictor - INFO -   AUC-ROC:   0.8243
+2026-01-08 20:12:23 - diabetes_predictor - INFO -   Precision: 0.6591
+2026-01-08 20:12:23 - diabetes_predictor - INFO -   Recall:    0.5370
+2026-01-08 20:12:23 - diabetes_predictor - INFO -   F1-Score:  0.5918
+2026-01-08 20:12:23 - diabetes_predictor - INFO - 
+Confusion Matrix:
+2026-01-08 20:12:23 - diabetes_predictor - INFO -   TN: 85, FP: 15
+2026-01-08 20:12:23 - diabetes_predictor - INFO -   FN: 25, TP: 29
+2026-01-08 20:12:24 - diabetes_predictor - INFO - ✓ Confusion matrix saved to /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/models/confusion_matrix.png
+2026-01-08 20:12:24 - diabetes_predictor - INFO - ✓ Training history saved to /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/models/training_history.png
+2026-01-08 20:12:24 - diabetes_predictor - INFO - 
+================================================================================
+2026-01-08 20:12:24 - diabetes_predictor - INFO - STEP 5: PREDICTION VALIDATION
+2026-01-08 20:12:24 - diabetes_predictor - INFO - ================================================================================
+2026-01-08 20:12:24 - diabetes_predictor - INFO - ============================================================
+2026-01-08 20:12:24 - diabetes_predictor - INFO - VALIDATING MODEL PREDICTIONS
+2026-01-08 20:12:24 - diabetes_predictor - INFO - ============================================================
+2026-01-08 20:12:24 - diabetes_predictor - INFO - 
+Low risk patient:
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Description: Young with normal glucose
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Predicted probability: 0.0169
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Expected range: 0.00 - 0.40
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Status: ✓ PASS
+2026-01-08 20:12:24 - diabetes_predictor - INFO - 
+Medium risk patient:
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Description: Middle-aged with borderline values
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Predicted probability: 0.3344
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Expected range: 0.30 - 0.70
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Status: ✓ PASS
+2026-01-08 20:12:24 - diabetes_predictor - INFO - 
+High risk patient:
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Description: Multiple high-risk factors
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Predicted probability: 0.8781
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Expected range: 0.60 - 1.00
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Status: ✓ PASS
+2026-01-08 20:12:24 - diabetes_predictor - INFO - 
+Test Set Validation:
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   ✓ All predictions in valid range [0, 1]
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Prediction distribution:
+2026-01-08 20:12:24 - diabetes_predictor - INFO -     Low risk (<30%):     75 (48.7%)
+2026-01-08 20:12:24 - diabetes_predictor - INFO -     Medium risk (30-70%): 53 (34.4%)
+2026-01-08 20:12:24 - diabetes_predictor - INFO -     High risk (>70%):    26 (16.9%)
+2026-01-08 20:12:24 - diabetes_predictor - INFO - 
+============================================================
+2026-01-08 20:12:24 - diabetes_predictor - INFO - ✓ ALL VALIDATION CHECKS PASSED
+2026-01-08 20:12:24 - diabetes_predictor - INFO - ============================================================
+
+2026-01-08 20:12:24 - diabetes_predictor - INFO - 
+================================================================================
+2026-01-08 20:12:24 - diabetes_predictor - INFO - STEP 6: SAVING MODEL AND ARTIFACTS
+2026-01-08 20:12:24 - diabetes_predictor - INFO - ================================================================================
+2026-01-08 20:12:24 - diabetes_predictor - INFO - Saving model to /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/models/diabetes_risk_predictor_v1.0.0.h5
+2026-01-08 20:12:24 - diabetes_predictor - INFO - ✓ Model saved successfully
+2026-01-08 20:12:24 - diabetes_predictor - INFO - ✓ Metadata saved to /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/models/diabetes_risk_predictor_v1.0.0.json
+2026-01-08 20:12:24 - diabetes_predictor - INFO - ✓ Training report saved to /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/models/training_report_1.0.0.json
+2026-01-08 20:12:24 - diabetes_predictor - INFO - 
+================================================================================
+2026-01-08 20:12:24 - diabetes_predictor - INFO - TRAINING COMPLETE - SUMMARY
+2026-01-08 20:12:24 - diabetes_predictor - INFO - ================================================================================
+2026-01-08 20:12:24 - diabetes_predictor - INFO - 
+📊 MODEL INFORMATION:
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Version: 1.0.0
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Architecture: neural_network
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Total Parameters: 3,201
+2026-01-08 20:12:24 - diabetes_predictor - INFO - 
+📁 DATA:
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Training samples: 614
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Test samples: 154
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Features: 8
+2026-01-08 20:12:24 - diabetes_predictor - INFO - 
+🎯 TRAINING METRICS:
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Final Training Loss: 0.4051
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Final Training Accuracy: 0.7899
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Final Training AUC: 0.8798
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Final Validation Loss: 0.5010
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Final Validation Accuracy: 0.7403
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Final Validation AUC: 0.8200
+2026-01-08 20:12:24 - diabetes_predictor - INFO - 
+📈 TEST SET PERFORMANCE:
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Accuracy:  0.7403 (74.03%)
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   AUC-ROC:   0.8243
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Precision: 0.6591
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Recall:    0.5370
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   F1-Score:  0.5918
+2026-01-08 20:12:24 - diabetes_predictor - INFO - 
+  Confusion Matrix:
+2026-01-08 20:12:24 - diabetes_predictor - INFO -     True Negatives:  85
+2026-01-08 20:12:24 - diabetes_predictor - INFO -     False Positives: 15
+2026-01-08 20:12:24 - diabetes_predictor - INFO -     False Negatives: 25
+2026-01-08 20:12:24 - diabetes_predictor - INFO -     True Positives:  29
+2026-01-08 20:12:24 - diabetes_predictor - INFO - 
+✅ VALIDATION:
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Status: PASSED ✓
+2026-01-08 20:12:24 - diabetes_predictor - INFO - 
+💾 SAVED ARTIFACTS:
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Model: /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/models/diabetes_risk_predictor_v1.0.0.h5
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Scaler: /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/scalers/scaler_v1.0.0.pkl
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Confusion Matrix: /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/models/confusion_matrix.png
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Training History: /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/models/training_history.png
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   Training Report: /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/models/training_report_1.0.0.json
+2026-01-08 20:12:24 - diabetes_predictor - INFO - 
+================================================================================
+2026-01-08 20:12:24 - diabetes_predictor - INFO - ✓ TRAINING PIPELINE COMPLETED SUCCESSFULLY
+2026-01-08 20:12:24 - diabetes_predictor - INFO - ================================================================================
+2026-01-08 20:12:24 - diabetes_predictor - INFO - 
+Next steps:
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   1. Review training_history.png for learning curves
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   2. Check confusion_matrix.png for prediction patterns
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   3. Run 'python scripts/evaluate_model.py' for detailed analysis
+2026-01-08 20:12:24 - diabetes_predictor - INFO -   4. Start API server: 'python api/app.py'
+2026-01-08 20:12:24 - diabetes_predictor - INFO - ================================================================================
+

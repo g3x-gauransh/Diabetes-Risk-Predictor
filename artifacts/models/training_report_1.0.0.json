@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-01-09T01:12:24.526707",
+  "model_version": "1.0.0",
+  "environment": "development",
+  "configuration": {
+    "epochs": 200,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "hidden_layers": [
+      64,
+      32,
+      16
+    ],
+    "dropout_rate": 0.3
+  },
+  "results": {
+    "data": {
+      "train_samples": 614,
+      "test_samples": 154,
+      "n_features": 8,
+      "class_balance": {
+        "train_negative": 400,
+        "train_positive": 214,
+        "test_negative": 100,
+        "test_positive": 54
+      }
+    },
+    "training_metrics": {
+      "final_loss": 0.40511247515678406,
+      "final_accuracy": 0.7899022698402405,
+      "final_auc": 0.8797838687896729,
+      "final_val_loss": 0.5010176301002502,
+      "final_val_accuracy": 0.7402597665786743,
+      "final_val_auc": 0.8199999928474426
+    },
+    "evaluation_metrics": {
+      "accuracy": 0.7402597402597403,
+      "auc": 0.8242592592592592,
+      "precision": 0.6590909090909091,
+      "recall": 0.5370370370370371,
+      "f1_score": 0.5918367346938775
+    },
+    "validation_passed": true
+  }
+}
