@@ -1,6 +1,5 @@
 """
-Configuration management using environment variables and config files.
-Supports multiple environments (dev, staging, production).
+Simplified configuration - No database required.
 """
 import os
 from pathlib import Path
@@ -57,7 +56,7 @@ class APIConfig:
     """API configuration"""
     host: str = os.getenv('API_HOST', '0.0.0.0')
     port: int = int(os.getenv('API_PORT', 5000))
-    debug: bool = os.getenv('DEBUG', 'False').lower() == 'true'
+    debug: bool = os.getenv('DEBUG', 'True').lower() == 'true'
     workers: int = int(os.getenv('WORKERS', 4))
     
     # Security
@@ -150,5 +149,5 @@ class Settings:
         return self.environment == 'development'
 
 
-# IMPORTANT: Global settings instance - THIS MUST BE AT THE END
+# Global settings instance
 settings = Settings()

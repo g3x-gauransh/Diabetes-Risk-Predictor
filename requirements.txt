@@ -16,6 +16,16 @@ pydantic>=2.0.0
 
 # Utilities
 python-dotenv>=1.0.0
-
-# Optional: For data download
 requests>=2.31.0
+
+# API Framework (NEW)
+flask>=3.0.0
+flask-cors>=4.0.0
+flask-limiter>=3.5.0
+werkzeug>=3.0.0
+
+# API Documentation (NEW)
+flasgger>=0.9.7
+
+# Production server (NEW)
+gunicorn>=21.2.0
