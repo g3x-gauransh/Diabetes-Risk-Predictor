@@ -28,4 +28,5 @@ werkzeug>=3.0.0
 flasgger>=0.9.7
 
 # Production server (NEW)
-gunicorn>=21.2.0
+gunicorn>=21.2.0streamlit>=1.29.0
+plotly>=5.18.0
