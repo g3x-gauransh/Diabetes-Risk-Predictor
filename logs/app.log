@@ -886,3 +886,90 @@ Next steps:
 2026-01-16 18:54:52 - diabetes_predictor - INFO - API documentation: http://0.0.0.0:8000/docs
 2026-01-16 18:54:52 - diabetes_predictor - INFO - ============================================================
 2026-01-16 18:54:52 - diabetes_predictor - INFO - Starting Flask server on 0.0.0.0:8000
+2026-01-21 21:44:06 - diabetes_predictor - INFO - Initializing Prediction Service...
+2026-01-21 21:44:06 - diabetes_predictor - INFO - Loading neural network model...
+2026-01-21 21:44:06 - diabetes_predictor - INFO - Loading model from /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/models/diabetes_risk_predictor_v1.0.0.h5
+2026-01-21 21:44:07 - diabetes_predictor - INFO - ✓ Model loaded successfully
+2026-01-21 21:44:07 - diabetes_predictor - INFO - Model version: 1.0.0
+2026-01-21 21:44:07 - diabetes_predictor - INFO - Loading feature scaler...
+2026-01-21 21:44:07 - diabetes_predictor - INFO - Loading scaler from /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/scalers/scaler_v1.0.0.pkl
+2026-01-21 21:44:07 - diabetes_predictor - INFO - ✓ Scaler loaded successfully
+2026-01-21 21:44:07 - diabetes_predictor - INFO - ✓ Prediction service initialized successfully
+2026-01-21 21:44:07 - diabetes_predictor - INFO -   Model version: 1.0.0
+2026-01-21 21:44:07 - diabetes_predictor - INFO -   Model path: /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/models/diabetes_risk_predictor_v1.0.0.h5
+2026-01-21 21:44:07 - diabetes_predictor - INFO - Rate limiting enabled: 60 requests/minute
+2026-01-21 21:44:07 - diabetes_predictor - INFO - ✓ Error handlers registered
+2026-01-21 21:44:07 - diabetes_predictor - INFO - ============================================================
+2026-01-21 21:44:07 - diabetes_predictor - INFO - FLASK APPLICATION INITIALIZED
+2026-01-21 21:44:07 - diabetes_predictor - INFO - ============================================================
+2026-01-21 21:44:07 - diabetes_predictor - INFO - Environment: development
+2026-01-21 21:44:07 - diabetes_predictor - INFO - Debug mode: True
+2026-01-21 21:44:07 - diabetes_predictor - INFO - API documentation: http://0.0.0.0:8000/docs
+2026-01-21 21:44:07 - diabetes_predictor - INFO - ============================================================
+2026-01-21 21:44:07 - diabetes_predictor - INFO - Starting Flask server on 0.0.0.0:8000
+2026-01-21 21:44:10 - diabetes_predictor - INFO - Initializing Prediction Service...
+2026-01-21 21:44:10 - diabetes_predictor - INFO - Loading neural network model...
+2026-01-21 21:44:10 - diabetes_predictor - INFO - Loading model from /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/models/diabetes_risk_predictor_v1.0.0.h5
+2026-01-21 21:44:10 - diabetes_predictor - INFO - ✓ Model loaded successfully
+2026-01-21 21:44:10 - diabetes_predictor - INFO - Model version: 1.0.0
+2026-01-21 21:44:10 - diabetes_predictor - INFO - Loading feature scaler...
+2026-01-21 21:44:10 - diabetes_predictor - INFO - Loading scaler from /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/scalers/scaler_v1.0.0.pkl
+2026-01-21 21:44:10 - diabetes_predictor - INFO - ✓ Scaler loaded successfully
+2026-01-21 21:44:10 - diabetes_predictor - INFO - ✓ Prediction service initialized successfully
+2026-01-21 21:44:10 - diabetes_predictor - INFO -   Model version: 1.0.0
+2026-01-21 21:44:10 - diabetes_predictor - INFO -   Model path: /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/models/diabetes_risk_predictor_v1.0.0.h5
+2026-01-21 21:44:10 - diabetes_predictor - INFO - Rate limiting enabled: 60 requests/minute
+2026-01-21 21:44:10 - diabetes_predictor - INFO - ✓ Error handlers registered
+2026-01-21 21:44:10 - diabetes_predictor - INFO - ============================================================
+2026-01-21 21:44:10 - diabetes_predictor - INFO - FLASK APPLICATION INITIALIZED
+2026-01-21 21:44:10 - diabetes_predictor - INFO - ============================================================
+2026-01-21 21:44:10 - diabetes_predictor - INFO - Environment: development
+2026-01-21 21:44:10 - diabetes_predictor - INFO - Debug mode: True
+2026-01-21 21:44:10 - diabetes_predictor - INFO - API documentation: http://0.0.0.0:8000/docs
+2026-01-21 21:44:10 - diabetes_predictor - INFO - ============================================================
+2026-01-21 21:44:10 - diabetes_predictor - INFO - Starting Flask server on 0.0.0.0:8000
+2026-01-21 21:45:18 - diabetes_predictor - INFO - Initializing Prediction Service...
+2026-01-21 21:45:18 - diabetes_predictor - INFO - Loading neural network model...
+2026-01-21 21:45:18 - diabetes_predictor - INFO - Loading model from /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/models/diabetes_risk_predictor_v1.0.0.h5
+2026-01-21 21:45:18 - diabetes_predictor - INFO - ✓ Model loaded successfully
+2026-01-21 21:45:18 - diabetes_predictor - INFO - Model version: 1.0.0
+2026-01-21 21:45:18 - diabetes_predictor - INFO - Loading feature scaler...
+2026-01-21 21:45:18 - diabetes_predictor - INFO - Loading scaler from /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/scalers/scaler_v1.0.0.pkl
+2026-01-21 21:45:18 - diabetes_predictor - INFO - ✓ Scaler loaded successfully
+2026-01-21 21:45:18 - diabetes_predictor - INFO - ✓ Prediction service initialized successfully
+2026-01-21 21:45:18 - diabetes_predictor - INFO -   Model version: 1.0.0
+2026-01-21 21:45:18 - diabetes_predictor - INFO -   Model path: /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/models/diabetes_risk_predictor_v1.0.0.h5
+2026-01-21 21:45:18 - diabetes_predictor - INFO - Rate limiting enabled: 60 requests/minute
+2026-01-21 21:45:18 - diabetes_predictor - INFO - ✓ Error handlers registered
+2026-01-21 21:45:18 - diabetes_predictor - INFO - ============================================================
+2026-01-21 21:45:18 - diabetes_predictor - INFO - FLASK APPLICATION INITIALIZED
+2026-01-21 21:45:18 - diabetes_predictor - INFO - ============================================================
+2026-01-21 21:45:18 - diabetes_predictor - INFO - Environment: development
+2026-01-21 21:45:18 - diabetes_predictor - INFO - Debug mode: True
+2026-01-21 21:45:18 - diabetes_predictor - INFO - API documentation: http://0.0.0.0:8000/docs
+2026-01-21 21:45:18 - diabetes_predictor - INFO - ============================================================
+2026-01-21 21:45:18 - diabetes_predictor - INFO - Starting Flask server on 0.0.0.0:8000
+2026-01-21 21:45:21 - diabetes_predictor - INFO - Initializing Prediction Service...
+2026-01-21 21:45:21 - diabetes_predictor - INFO - Loading neural network model...
+2026-01-21 21:45:21 - diabetes_predictor - INFO - Loading model from /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/models/diabetes_risk_predictor_v1.0.0.h5
+2026-01-21 21:45:21 - diabetes_predictor - INFO - ✓ Model loaded successfully
+2026-01-21 21:45:21 - diabetes_predictor - INFO - Model version: 1.0.0
+2026-01-21 21:45:21 - diabetes_predictor - INFO - Loading feature scaler...
+2026-01-21 21:45:21 - diabetes_predictor - INFO - Loading scaler from /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/scalers/scaler_v1.0.0.pkl
+2026-01-21 21:45:21 - diabetes_predictor - INFO - ✓ Scaler loaded successfully
+2026-01-21 21:45:21 - diabetes_predictor - INFO - ✓ Prediction service initialized successfully
+2026-01-21 21:45:21 - diabetes_predictor - INFO -   Model version: 1.0.0
+2026-01-21 21:45:21 - diabetes_predictor - INFO -   Model path: /Users/gauransh/Desktop/Projects/Diabetes-Risk-Predictor/artifacts/models/diabetes_risk_predictor_v1.0.0.h5
+2026-01-21 21:45:21 - diabetes_predictor - INFO - Rate limiting enabled: 60 requests/minute
+2026-01-21 21:45:21 - diabetes_predictor - INFO - ✓ Error handlers registered
+2026-01-21 21:45:21 - diabetes_predictor - INFO - ============================================================
+2026-01-21 21:45:21 - diabetes_predictor - INFO - FLASK APPLICATION INITIALIZED
+2026-01-21 21:45:21 - diabetes_predictor - INFO - ============================================================
+2026-01-21 21:45:21 - diabetes_predictor - INFO - Environment: development
+2026-01-21 21:45:21 - diabetes_predictor - INFO - Debug mode: True
+2026-01-21 21:45:21 - diabetes_predictor - INFO - API documentation: http://0.0.0.0:8000/docs
+2026-01-21 21:45:21 - diabetes_predictor - INFO - ============================================================
+2026-01-21 21:45:21 - diabetes_predictor - INFO - Starting Flask server on 0.0.0.0:8000
+2026-01-21 21:45:36 - diabetes_predictor - INFO - Making single prediction
+2026-01-21 21:45:36 - diabetes_predictor - INFO - Prediction completed: Low risk (8.71%)
+2026-01-21 21:45:36 - diabetes_predictor - INFO - Prediction request completed in 33.76ms
